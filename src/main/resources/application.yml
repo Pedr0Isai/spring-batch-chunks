@@ -1,10 +1,10 @@
 spring:
   batch:
     #Deshabilitamos que se ejecute el job automaticamente al iniciar la aplicación
-    #ya que funciona, pero los jobs y steps no son identificables.
+    #ya que funciona, pero los jobs y steps no son identificables
     job:
       enabled: false
-    #Crea automaticamente las tablas del job repository, son tablas de SpringBatch
+    #Crea automaticamente las tablas del job repository (tablas de SpringBatch) en la BBDD
     jdbc:
       initialize-schema: always
   sql:
