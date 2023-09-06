@@ -1,0 +1,24 @@
+spring:
+  batch:
+    #Deshabilitamos que se ejecute el job automaticamente al iniciar la aplicación
+    #ya que funciona, pero los jobs y steps no son identificables.
+    job:
+      enabled: false
+    #Crea automaticamente las tablas del job repository, son tablas de SpringBatch
+    jdbc:
+      initialize-schema: always
+  sql:
+    #Se define con que base de datos se va a trabajar, es opcional
+    init:
+      platform: h2
+  jpa:
+    #Crea/actualiza las tablas del package.model de forma automatica
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+server:
+  port: 8001
